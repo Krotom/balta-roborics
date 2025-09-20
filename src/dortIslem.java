@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Main {
+public class dortIslem {
     public static void main(String[] args) {
         Random random = new Random();
         Integer x = random.nextInt(100) + 1;
