@@ -2,17 +2,15 @@
 
 import java.util.Random;
 
-public class dortIslem {
-    public static void main(String[] args) {
-        Random random = new Random();
-        Integer x = random.nextInt(100) + 1;
-        Integer y = random.nextInt(100) + 1;
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-        System.out.println("x + y = " + (x + y));
-        System.out.println("x - y = " + (x - y));
-        System.out.println("x * y = " + (x * y));
-        System.out.println("x / y = " + (x / y));
-        System.out.println("x % y = " + (x % y));
-    }
+void main() {
+    Random random = new Random();
+    Double x = (double) random.nextInt(100) + 1;
+    Double y = (double) random.nextInt(100) + 1;
+    System.out.println("x = " + x);
+    System.out.println("y = " + y);
+    System.out.println("x + y = " + (x + y));
+    System.out.println("x - y = " + (x - y));
+    System.out.println("x * y = " + (x * y));
+    System.out.println("x / y = " + (x / y));
+    System.out.println("x % y = " + (x % y));
 }
