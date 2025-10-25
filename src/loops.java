@@ -11,5 +11,5 @@ void main() {
     Integer[] sortedNumbers = Arrays.copyOf(numbers, numbers.length);
     Arrays.sort(sortedNumbers);
 
-    System.out.println(Arrays.toString(sortedNumbers));
+    IO.println(Arrays.toString(sortedNumbers));
 }

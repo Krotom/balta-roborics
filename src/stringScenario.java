@@ -1,5 +1,5 @@
 void main() {
-        String input = IO.readline();
+        String input = IO.readln();
         String s = (input == null) ? "" : input.trim();
 
         IO.println("\n--- Temel bilgi ---");
@@ -56,7 +56,7 @@ void main() {
             }
         } else {
             IO.println("\nSonuç: Basit kontrol bazında e-posta gibi görünmüyor.");
-            if (hasAt && !looksLikeEmail) {
+            if (hasAt) {
                 if (!onlyOneAt) IO.println("- İpucu: birden fazla '@' işareti var.");
                 if (!dotAfterAt) IO.println("- İpucu: '@' sonrası uygun '.' yok.");
                 if (!noConsecutiveDots) IO.println("- İpucu: ardışık '..' bulunuyor.");
