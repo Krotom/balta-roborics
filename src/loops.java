@@ -1,6 +1,8 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Random;
 
-void bubble_sort(int[] arr) {
+void bubble_sort(Integer @NotNull [] arr) {
 	int n = arr.length;
 	for (int i = 0; i < n; i++) {
 		boolean swap = false;
@@ -36,5 +38,5 @@ void main() {
 
     IO.println("Bubble Sort Algoritması: " + Arrays.toString(sortedNumbers2));
 
-	IO.println("Arrayler aynı mı: " + Arrays.equals(sortedNumbers1, sortedNumbers2));
+	IO.println("Arrayler aynı mı: " + Arrays.equals(sortedNumbers, sortedNumbers2));
 }
