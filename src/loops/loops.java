@@ -30,7 +30,7 @@ void main() {
 
     Integer[] sortedNumbers = Arrays.copyOf(numbers, numbers.length);
     Arrays.sort(sortedNumbers);
-	
+
     IO.println("Arrays.sort: " + Arrays.toString(sortedNumbers));
 
 	Integer[] sortedNumbers2 = Arrays.copyOf(numbers, numbers.length);
