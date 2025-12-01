@@ -1,4 +1,4 @@
-package ders;
+package oop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Day {
         if (dersler.size() < 8) {
             dersler.add(ders);
         } else {
-            System.out.println("Bir günde maksimum 8 ders olabilir!");
+            IO.println("Bir günde maksimum 8 ders olabilir!");
         }
     }
 
@@ -44,12 +44,12 @@ public class Day {
     }
 
     public void dersleriGoster() {
-        System.out.println("\n=== " + gunAdi + " ===");
-        System.out.println("Ders Sayısı: " + dersler.size());
-        System.out.println("Günlük Ortalama: " + String.format("%.1f", getGunlukOrtalama()));
-        System.out.println("\nDersler:");
+        IO.println("\n=== " + gunAdi + " ===");
+        IO.println("Ders Sayısı: " + dersler.size());
+        IO.println("Günlük Ortalama: " + String.format("%.1f", getGunlukOrtalama()));
+        IO.println("\nDersler:");
         for (int i = 0; i < dersler.size(); i++) {
-            System.out.println((i + 1) + ". " + dersler.get(i));
+            IO.println((i + 1) + ". " + dersler.get(i));
         }
     }
 

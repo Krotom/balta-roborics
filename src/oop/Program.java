@@ -1,4 +1,4 @@
-package ders;
+package oop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,30 +26,30 @@ public class Program {
     }
 
     public void programiGoster() {
-        System.out.println("\n╔════════════════════════════════════════════════════════════╗");
-        System.out.println("║           5 GÜNLÜK DERS PROGRAMI                           ║");
-        System.out.println("╚════════════════════════════════════════════════════════════╝");
+        IO.println("\n╔════════════════════════════════════════════════════════════╗");
+        IO.println("║           5 GÜNLÜK DERS PROGRAMI                           ║");
+        IO.println("╚════════════════════════════════════════════════════════════╝");
 
         for (Day gun : gunler) {
             gun.dersleriGoster();
         }
 
-        System.out.println("\n" + "=".repeat(60));
-        System.out.println("HAFTALIK ÖZET");
-        System.out.println("=".repeat(60));
-        System.out.println("Toplam Gün Sayısı: " + gunler.size());
+        IO.println("\n" + "=".repeat(60));
+        IO.println("HAFTALIK ÖZET");
+        IO.println("=".repeat(60));
+        IO.println("Toplam Gün Sayısı: " + gunler.size());
         int toplamDers = 0;
         for (Day gun : gunler) {
             toplamDers += gun.getDersSayisi();
         }
-        System.out.println("Toplam Ders Sayısı: " + toplamDers);
-        System.out.println("Haftalık Ortalama: " + String.format("%.1f", getHaftalikOrtalama()));
-        System.out.println("=".repeat(60));
+        IO.println("Toplam Ders Sayısı: " + toplamDers);
+        IO.println("Haftalık Ortalama: " + String.format("%.1f", getHaftalikOrtalama()));
+        IO.println("=".repeat(60));
     }
 
     public void enYuksekOrtalamaGoster() {
         if (gunler.isEmpty()) {
-            System.out.println("Program boş!");
+            IO.println("Program boş!");
             return;
         }
 
@@ -60,21 +60,21 @@ public class Program {
             }
         }
 
-        System.out.println("\n=== En Yüksek Ortalamalı Gün ===");
-        System.out.println(enYuksekGun);
+        IO.println("\n=== En Yüksek Ortalamalı Gün ===");
+        IO.println(enYuksekGun);
     }
 
     public void yuksekNotluDersleriGoster(double minOrtalama) {
-        System.out.println("\n=== Ortalaması " + minOrtalama + " ve Üzeri Olan Dersler ===");
+        IO.println("\n=== Ortalaması " + minOrtalama + " ve Üzeri Olan Dersler ===");
         for (Day gun : gunler) {
             boolean baslikYazildi = false;
             for (Ders ders : gun.getDersler()) {
                 if (ders.getOrtalama() >= minOrtalama) {
                     if (!baslikYazildi) {
-                        System.out.println("\n" + gun.getGunAdi() + ":");
+                        IO.println("\n" + gun.getGunAdi() + ":");
                         baslikYazildi = true;
                     }
-                    System.out.println("  - " + ders);
+                    IO.println("  - " + ders);
                 }
             }
         }

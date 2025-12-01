@@ -1,4 +1,4 @@
-package ders;
+package oop;
 
 public class Ders {
     private final String dersAdi;
